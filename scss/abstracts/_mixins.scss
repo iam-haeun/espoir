@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+@mixin hover {
+    &:hover, 
+    &:active, 
+    &:focus {
+        @content;
+    }
+}
+
+@mixin blind {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+
+@mixin font-face($font-family, $weight, $name) {
+    @font-face {
+        font-family: '#{$font-family}';
+        font-weight: #{$weight};
+        font-style: normal;
+        src: url('#{$font-path}#{$name}.eot');
+        src: url('#{$font-path}#{$name}.eot?#iefix') format('embedded-opentype'),
+             url('#{$font-path}#{$name}.woff2') format('woff2'),
+             url('#{$font-path}#{$name}.woff') format('woff'),
+             url('#{$font-path}#{$name}.ttf') format('truetype');
+    }
+}
+
+// Viewport media query
+@mixin desktop {
+    @media screen and (max-width: $break-lg) {
+        @content;
+    }
+}
+@mixin tab {
+    @media screen and (max-width: $break-md) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media screen and (max-width: $break-sm) {
+        @content;
+    }
+}
+
+// Position center
+@mixin positionCenterX($type: absolute) {
+    @if ($type == fixed or $type == absolute) {
+        position: $type;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@mixin positionCenterY($type: absolute) {
+    @if ($type == fixed or $type == absolute) {
+        position: $type;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+@mixin positionCenter($type: absolute) {
+    @if ($type == fixed or $type == absolute) {
+        position: $type;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+// 닫기 버튼
+@mixin icoClose($top, $size, $width, $color) {
+    position: absolute;
+    top: $top;
+    width: $size;
+    height: $size;
+    font-size: 0;
+    &::before, 
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(50% - $size / 2);
+        left: 50%;
+        width: $width;
+        height: $size;
+        background: $color;
+    }
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+// 백그라운드 이미지
+@mixin backgroundImg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin logoType($type) {
+    background-image: url(../images/common/logo#{$type}.png);   
+}
+
+@mixin headerMenuType($name, $type) {
+    background-image: url(../images/icon/ico_#{$name}#{$type}.svg);   
+}
+
+// 이미지 데이터
+$insta-imgs: ( // top, right, animation-duration, translateX 처음 값, translateX 끝 값
+    1: (30%, 16%, 75s, -60vw, 25vw), 
+    2: (80%, 5%, 76s, -45vw, 30vw),
+    3: (62%, -25%, 87s, -30vw, 45vw),
+    4: (15%, -65%, 63s, -30vw, 62vw),
+    5: (92%, -90%, 89s, -70vw, 70vw),
+    6: (50%, -50%, 80s, -70vw, 70vw),
+    7: (13%, -20%, 68s, -70vw, 70vw),
+    8: (13%, -20%, 68s, -70vw, 70vw),
+    9: (30%, -30%, 73s, -70vw, 70vw)
+);
+
+// 공통 애니메이션 믹스인
+@mixin instaKeyframes($index, $animation-duration, $translate-x-1, $translate-x-2) {
+    @keyframes insta-move-effect-#{$index} {
+        50% {
+            transform: translateX(#{$translate-x-1}) translateY(0%);
+        }
+        50.001% {
+            transform: translateX(#{$translate-x-2}) translateY(0%);
+        }
+    }
+    animation: insta-move-effect-#{$index} $animation-duration linear 0s infinite;
+}

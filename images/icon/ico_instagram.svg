@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#Adobe_OpacityMaskFilter);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st2{mask:url(#mask-2_1_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+</style>
+<title>instagram_out</title>
+<g id="instagram_out">
+	<g id="Group-8" transform="translate(7.000000, 7.000000)">
+		<g id="Group-3">
+			<g id="Clip-2">
+			</g>
+			<defs>
+				<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="26" height="26">
+					<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+				</filter>
+			</defs>
+			<mask maskUnits="userSpaceOnUse" x="0" y="0" width="26" height="26" id="mask-2_1_">
+				<g class="st0">
+					<polygon id="path-1_1_" class="st1" points="0,0 26,0 26,26 0,26 					"/>
+				</g>
+			</mask>
+			<path id="Fill-1" class="st2" d="M24.5,19.6c0,2.7-2.2,4.9-4.9,4.9H6.4c-2.7,0-4.9-2.2-4.9-4.9V6.4c0-2.7,2.2-4.9,4.9-4.9h13.2
+				c2.7,0,4.9,2.2,4.9,4.9V19.6z M19.6,0H6.4C2.9,0,0,2.9,0,6.4v13.2C0,23.1,2.9,26,6.4,26h13.2c3.5,0,6.4-2.9,6.4-6.4V6.4
+				C26,2.9,23.1,0,19.6,0L19.6,0z"/>
+		</g>
+		<path id="Fill-4" class="st1" d="M13,17.5c-2.5,0-4.5-2-4.5-4.5c0-2.5,2-4.5,4.5-4.5s4.5,2,4.5,4.5C17.5,15.5,15.5,17.5,13,17.5
+			 M13,7c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S16.3,7,13,7"/>
+		<path id="Fill-6" class="st1" d="M20.5,5C19.7,5,19,5.7,19,6.5S19.7,8,20.5,8S22,7.3,22,6.5S21.3,5,20.5,5"/>
+	</g>
+</g>
+</svg>

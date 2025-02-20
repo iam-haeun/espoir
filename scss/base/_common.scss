@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* common */
+
+:root {
+    --theme-color-primary: #ce0e2d;  /* 기본 색상 */
+    --theme-color-primary-light: #DA6372;
+    --theme-color-primary-dark: #8e6369;
+    --theme-color-secondary: #4e3836;  /* 보조 색상 */
+    --theme-color-background: #fcf1ed;  /* 배경 색상 */
+  
+    --header-menu-color: #4e3836;
+  
+    --footer-text-color-base: #EBBEC0;
+    --footer-text-color-title: #F6E4E5;
+}
+
+* {
+    box-sizing: border-box;
+    &::before,
+    &::after {
+        @extend *;
+    }
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    line-height: 1.8;
+    font-family: $font-family-base;
+    color: var(--theme-color-secondary);
+    -webkit-text-size-adjust: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.blind {
+    @include blind;
+}
+
+.mo-only {
+    display: none !important;
+    @include mobile {
+        display: block !important;
+    }
+}
+.pc-only {
+    @include mobile {
+        display: none !important;
+    }
+}
+
+// button
+.btn {
+    color: var(--theme-color-primary); 
+    text-decoration: underline;
+    @include hover {
+        text-decoration: none;
+    }
+    &-v2 {
+        background: var(--theme-color-primary); 
+        color: #fff;
+        transition: all 0.3s;
+        @include hover {
+            background: var(--theme-color-primary-light);
+        }
+    }
+}
+  
+// text deco
+.td-line {
+    text-decoration: underline;
+    @include hover {
+        text-decoration: none;
+    }
+}

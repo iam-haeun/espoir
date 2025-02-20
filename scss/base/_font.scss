@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* font */
+
+// Akkurat
+@include font-face('Akkurat', 400, 'Akkurat');
+
+// Noto Sans KR
+@include font-face('Noto Sans KR', 100, 'NotoSansKR-Thin');
+@include font-face('Noto Sans KR', 300, 'NotoSansKR-Light');
+@include font-face('Noto Sans KR', 400, 'NotoSansKR-Regular');
+@include font-face('Noto Sans KR', 500, 'NotoSansKR-Medium');
+@include font-face('Noto Sans KR', 700, 'NotoSansKR-Bold');
+@include font-face('Noto Sans KR', 900, 'NotoSansKR-Black');
+
+// Constantia
+@include font-face('Constantia', 400, 'Constantia');

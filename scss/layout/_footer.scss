@@ -1,0 +1,241 @@
+@charset "utf-8";
+/* footer */
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 40px 20px;
+    background: var(--theme-color-primary);
+    @include tab {
+        flex-direction: column;
+        padding: 40px 10px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 200px;
+        background: var(--theme-color-primary);
+    }
+    .footer-info {
+        width: 50%;
+        @include tab {
+            order: 2;
+            width: 100%;
+        }
+        .footer-logo { 
+            opacity: 0.8; 
+            img {
+                width: 116px;
+                height: 44px;
+            }
+            @include tab {
+                position: absolute;
+                top: 40px;
+                left: 10px;
+                img {
+                    width: 79px;
+                    height: 30px;
+                }
+            }
+        }
+        .info-wrap {
+            margin-top: 50px;
+            font-size: 12px;
+            letter-spacing: 0.15px;
+            color: var(--footer-text-color-base);
+            .info-txt {
+                .td-line {
+                    color: #fff;
+                }
+            }
+            @include tab {
+                margin-top: 15px;
+                .info-txt {
+                    display: none;
+                }
+            }
+            .link-list {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 15px;
+                li {
+                    & + li::before {
+                        content: '';
+                        display: inline-block;
+                        width: 1px;
+                        height: 10px;
+                        margin: 0 5px;
+                        background: currentColor;
+                    }
+                    a {
+                        &:not(.td-line) {
+                            @include hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+
+            }
+            .copyright {
+                margin-top: 15px;
+                @include tab {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    .footer-link {
+        display: flex;
+        width: 50%;
+        @include tab {
+            order: 1;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 70px;
+        }
+        .link-wrap {
+            width: 33.333%;
+            padding: 0 10px;
+            letter-spacing: -0.15px;
+            @include tab {
+                width: 100%;
+                padding: 0;
+            }
+            .tit {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: 500;
+                font-size: 13px;
+                font-family: $font-family-title;
+                color: var(--footer-text-color-title);
+                @include tab {
+                    position: relative;
+                    margin-bottom: 10px;
+                    font-size: 15px;
+                    cursor: pointer;
+                    &.on {
+                        .ico {
+                            &::after {
+                                content: none;
+                            }
+                        }
+                    }
+                }
+                .ico {
+                    display: none;
+                    @include tab {
+                        display: block;
+                        position: absolute;
+                        top: calc(50% - 5px);
+                        right: 0;
+                        width: 10px;
+                        height: 10px;
+                        font-size: 0;
+                        &::before,
+                        &::after {
+                            content: '';
+                            @include positionCenter;
+                            background: #fff;
+                        }
+                        &::before {
+                            width: 100%;
+                            height: 1px;
+                        }
+                        &::after {
+                            width: 1px;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            .cont {
+                margin-bottom: 20px;
+                font-size: 12px;
+                line-height: 2.2;
+                color: var(--footer-text-color-base);
+                @include tab {
+                    display: none;
+                }
+                .tel {
+                    margin-bottom: 20px;
+                    font-weight: bold;
+                    font-size: 32px;
+                    line-height: normal;
+                    font-family: $font-family-title;
+                    letter-spacing: 1.02px;
+                    color: var(--footer-text-color-title);
+                    @include tab {
+                        margin-bottom: 5px;
+                        font-size: 30px;
+                        line-height: 1;
+                    }
+                }
+                ul {
+                    li {
+                        a {
+                            @include hover {
+                                color: var(--footer-text-color-title);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .info-txt {
+            display: none;
+            @include tab {
+                display: block;
+                .cont {
+                    .td-line {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .footer-icon {
+        width: 100%;
+        @include tab {
+            order: 3;
+            margin-top: 30px;
+        }
+        ul {
+            display: flex;
+            position: relative;
+            margin-left: 50%;
+            @include tab {
+                margin-left: 0;
+            }
+            li {
+                [class*='ico-'] {
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    @include backgroundImg;
+                    font-size: 0;
+                }
+                .ico-insta {
+                    background-image: url(../images/icon/ico_instagram.svg);
+                }
+                .ico-kakao {
+                    background-image: url(../images/icon/ico_kakaotalk.svg);
+                }
+                .ico-twitter {
+                    background-image: url(../images/icon/ico_twitter.svg);
+                }
+                .ico-top {
+                    position: absolute;
+                    top: 0;
+                    right: -5px;
+                    background-image: url(../images/icon/ico_arr_up.svg);
+                }
+            } 
+        }
+    }
+}
