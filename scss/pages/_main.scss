@@ -166,7 +166,8 @@
                     visibility: hidden; 
                     position: absolute;
                     bottom: 100px;
-                    left: 50%;
+                    left: 55%;
+                    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
                     transform: translateY(30%); 
                     transition: transform 1s;
                     @include mobile {
